@@ -25,12 +25,12 @@ jobs:
         docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
 
     - name: Build Docker Image
-      run: 
+      run: |
         docker build -t oscarl12/docker-graphql:0.0.2 .
         docker build -t oscarl12/docker-graphql:latest .
         
     - name: Push Docker Image
-      run: 
+      run: |
         docker push oscarl12/docker-graphql:0.0.2
         docker push oscarl12/docker-graphql:latest
         
